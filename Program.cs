@@ -16,10 +16,10 @@ namespace WeatherMicroservice
         {
             BuildWebHost(args).Run();
         }
+//                .UseUrls("http://*:1000")
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseUrls("http://*:1000")
                 .UseConfiguration(new ConfigurationBuilder().Build())
                 .UseStartup<Startup>()
                 .Build();
